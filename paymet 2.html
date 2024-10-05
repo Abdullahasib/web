@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="number"], 
+        input[type="password"], 
+        input[type="date"],
+        select, 
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .required {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="">
+        <h1>Payment Form</h1>
+        <p>Required fields are followed by <span class="required">*</span></p>
+        
+        <h2>Contact Information</h2>
+        
+        <p>
+            <label for="name">Name: <span class="required">*</span></label>
+            <input type="text" name="name" id="name" required>
+        </p>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <p>
+                <label>
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+            </p>
+        </fieldset>
+
+        <p>
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" cols="30" rows="5"></textarea>
+        </p>
+
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </p>
+
+        <p>
+            <label for="pincode">Pincode:</label>
+            <input type="number" name="pincode" id="pincode">
+        </p>
+
+        <h2>Payment Information</h2>
+        
+        <p>
+            <label for="card_type">Card Type:</label>
+            <select name="card_type" id="card_type">
+                <option value="">--Select a card type--</option>
+                <option value="Visa">Visa</option>
+                <option value="Master Card">Master Card</option>
+                <option value="Bkash">Bkash</option>
+                <option value="Nagad">Nagad</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="card_number">Card Number:</label>
+            <input type="number" name="card_number" id="card_number">
+        </p>
+
+        <p>
+            <label for="exp_date">Expiration Date:</label>
+            <input type="date" name="exp_date" id="exp_date">
+        </p>
+
+        <p>
+            <label for="cvv">CVV:</label>
+            <input type="password" name="cvv" id="cvv">
+        </p>
+
+        <p>
+            <input type="submit" value="Pay Now">
+        </p>
+    </form>
+
+</body>
+</html>
