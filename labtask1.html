@@ -56,12 +56,68 @@
   </select><br><br>
     <label for="other Amount "> Other Ammount $:</label>
     <input type="text" id="lname" name="lname" value=""><br>
-    
-  <input type="submit" value="Submit">
-  
-</form> 
+    <label for="fname">Recurring Donation:</label><br>
+        <label for="fname">(Check if yes)</label> 
+        <input type="checkbox" id="type" name="type" value="type">
+        <label for="type"> I am interested in giving on a regular basis. </label><br>
+        <label for="type"> Monthly Credit Card $  </label>
+        <input type="number"id="fname" name="fname" value="">
+        <label for="type"> For </label> 
+        <input type="number"id="fname" name="fname" value="">
+        <label for="type"> Months </label>
+        <br><br>
+    <h2>Honorarium and Memorial Donation Information</h2>
+        <label for="type"> I would like to make this donation </label><br>
+        <input type="radio" id="don" name="don" value="To Honor"> To Honor<br>
+  <input type="radio" id="don" name="don" value="In Memory">In Memory<br>
+  <label for="fname">Name:</label>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Acknowledge Donation to :</label>
+        <input type="text" id="lname" name="lname" value=""><br>
+        <label for="fname">Address:</label>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="fname">City:</label>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="fname">State  :</label>
+        <select id="State">
+            <option value="Dhaka">Dhaka</option>
+            <option value="Cumilla">Cumilla</option>
+            <option value="Rangpur">Rangpur</option>
+            <option value="Chattogram">Chattogram</option><br>
+        </select><br>
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+        <label for="fname">Zip :</label>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <h2>Additional Information</h2>
+        <p>Please enter your name, company or organization as you would like it to appear in our publications: </p>
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <input type="checkbox" id="type" name="type" value="type">
+        <label for="type"> I would like my gift to remain annoynymous. </label><br>
+        <input type="checkbox" id="type" name="type" value="type">
+        <label for="type"> My employer offers a matching gift program.I will mail the matching gift form. </label><br>
+        <input type="checkbox" id="type" name="type" value="type">
+        <label for="type"> Please save the cost of acknowledging this gift by not mailing a thank you letter . </label><br>
+        <label for="comments">Comments:</label><br>
+<textarea id="comment" name="comment" rows="3" cols="50" placeholder="hi..."></textarea><br>
+
+
+<label>How may we contact you?</label><br>
+<label><input type="checkbox" id="recurring " name="recurring">E-Mail</label><br>
+<label><input type="checkbox" id="recurring" name="recurring">Postal Mail</label><br>
+<label><input type="checkbox" id="recurring" name="recurring">Telephone</label><br>
+<label><input type="checkbox" id="recurring" name="recurring">Fax</label><br><br>
+
+<label>I would like to recive newsletter and information about special event by:</label><br>
+<label><input type="checkbox" id="recurring" name="recurring">E-Mail</label><br>
+<label><input type="checkbox" id="recurring" name="recurring">Postal Mail</label><br><br>
+
+
+
+<label><input type="checkbox" id="recurring" name="recurring">i would like information about volunteering with the.....</label><br><br>
+<button type="button" onclick="alert('Continue')">Continue</button>
+<button type="button" onclick="alert('Reset')">Reset</button>
+
 
 </body>
 </html>
