@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Donar Application</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" value= ><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" value=""><br>
+  
+ <label for="company">Company:</label>
+  <input type="text" id="company" name="company" value=""><br>
+  <label for="Address1">Address:</label><br>
+    <input type="text" id="Address1" name="Address1" value=""><br>
+    <label for="Address2">Address2:</label><br> 
+    <input type="text" id="Address2" name="Address2" value=""><br>
+  <label for="city">City:</label><br>
+  <input type="text" id="city" name="city" value=""><br>
+  <label for="state">State:</label><br>
+  <select id="state" name="state">
+    <option value="Dh">Dhaka</option>
+    <option value="Cu">Cumilla</option>
+    <option value="BA">Barishal</option>
+    <option value="Ch">Chottogram</option>
+    <option value="Sy">Sylhet</option>
+    <option value="Ra">Rangpur</option>
+    <option value="Kh">Khulna</option>
+    <option value="Na">Narayanganj</option>
+  <input type="text" id="state" name="state" value=""><br>
+  <label for="zip">Zip:</label><br>
+  <input type="text" id="zip" name="zip" value=""><br>
+  <label for="country">Country:</label><br>
+  <select id="country" name="country">
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="India">India</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Nepal">Nepal</option>
+    <option value="Bhutan">Bhutan</option>
+    <option value="Sri Lanka">Sri Lanka</option>
+  </select><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" value=""><br>
+  <label for="phone">Phone:</label><br>
+  <input type="tel" id="phone" name="phone" value=""><br>
+    <label for="don">Donation Amount:</label><br>
+  
+  <input type="radio" id="don" name="don" value="None"> None
+  <input type="radio" id="don" name="don" value="50">$50
+  <input type="radio" id="don" name="don" value="75">$75 
+  <input type="radio" id="don" name="don" value="100">$100
+  <input type="radio" id="don" name="don" value="250">$250 
+  <input type="radio" id="don" name="don" value="500">$500 
+  <input type="radio" id="don" name="don" value="Other">Other 
+  </select><br><br>
+    <label for="other Amount "> Other Ammount $:</label>
+    <input type="text" id="lname" name="lname" value=""><br>
+    
+  <input type="submit" value="Submit">
+  
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
