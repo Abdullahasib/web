@@ -1,0 +1,82 @@
+/* Page background and font */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e0f7fa); /* Light gradient */
+  margin: 0;
+  padding: 30px;
+}
+
+/* Form styling */
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+}
+
+/* Headings */
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: #2d3436;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* Inputs and selects */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+}
+
+/* Radio and checkbox inputs */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+button {
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Section spacing */
+h2:not(:first-child) {
+  margin-top: 40px;
+}
