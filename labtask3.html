@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donor Information Form</title>
+    <style>
+        .required { color: rgb(240, 6, 33); }
+        body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 20px;
+}
+ 
+.required {
+    display: inline;
+    color: red;
+}
+ 
+h1 {
+    color: red;
+    text-align: center;
+}
+ 
+h2 {
+    color: red;
+}
+ 
+form {
+    background-color: #7eb3d9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+ 
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #0abfdf;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+ 
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+ 
+textarea {
+    resize: vertical;
+}
+ 
+button {
+    background-color: #ab6de4;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 5px 0 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #9a77eada;
+}
+ 
+p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+ 
+hr {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+ 
+/* Grouping donation amounts horizontally */
+input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+ 
+/* Adjust checkbox sections */
+.contact-options label,
+.newsletter-options label {
+    display: block;
+    font-weight: normal;
+}
+ 
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+}
+ 
+ 
+    </style>
+</head>
+<body>
+  
+
+
+
+ 
+    <form>
+        <h1>Donor Information</h1>
+ 
+        <label for="fname">First name:<span class="required">*</span></label>
+        <input type="text" id="fname" name="fname"><br>
+ 
+        <label for="lname">Last name:<span class="required">*</span></label>
+        <input type="text" id="lname" name="lname"><br>
+ 
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company"><br>
+ 
+        <label for="address1">Address 1:<span class="required">*</span></label>
+        <input type="text" id="address1" name="address1"><br>
+ 
+        <label for="address2">Address 2:</label>
+        <input type="text" id="address2" name="address2"><br>
+ 
+        <label for="city">City:<span class="required">*</span></label>
+        <input type="text" id="city" name="city"><br>
+ 
+        <label for="state">State:<span class="required">*</span></label>
+        <select id="state" name="state">
+            <option value="Dhaka">Dhaka</option>
+            <option value="Cumilla">Cumilla</option>
+            <option value="Rangpur">Rangpur</option>
+            <option value="Chattogram">Chattogram</option>
+        </select><br>
+ 
+        <label for="zip">Zip Code:<span class="required">*</span></label>
+        <input type="text" id="zip" name="zip"><br>
+ 
+        <label for="country">Country:<span class="required">*</span></label>
+        <select id="country" name="country">
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="India">India</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="China">China</option>
+        </select><br>
+ 
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone"><br>
+ 
+        <label for="fax">Fax:</label>
+        <input type="text" id="fax" name="fax"><br>
+ 
+        <label for="email">Email:<span class="required">*</span></label>
+        <input type="email" id="email" name="email"><br>
+ 
+        <label>Donation Amount:<span class="required">*</span></label><br>
+        <input type="radio" id="none" name="donation_amount" value="None"> None
+        <input type="radio" id="50" name="donation_amount" value="50"> $50
+        <input type="radio" id="75" name="donation_amount" value="75"> $75
+        <input type="radio" id="100" name="donation_amount" value="100"> $100
+        <input type="radio" id="250" name="donation_amount" value="250"> $250
+        <input type="radio" id="500" name="donation_amount" value="500"> $500
+        <input type="radio" id="other" name="donation_amount" value="Other"> Other<br>
+ 
+        <label for="other_amount">Other Amount: $</label>
+        <input type="text" id="other_amount" name="other_amount"><br>
+ 
+        <label>Recurring Donation:</label><br>
+        <input type="checkbox" id="recurring" name="recurring"> I am interested in giving on a regular basis<br>
+ 
+        <label for="monthly_amount">Monthly Credit Card $</label>
+        <input type="number" id="monthly_amount" name="monthly_amount">
+        <label for="duration_months"> For </label>
+        <input type="number" id="duration_months" name="duration_months">
+        <label> Months </label><br>
+ 
+        <h2>Honorarium and Memorial Donation Information</h2>
+        <label>I would like to make this donation:</label><br>
+        <input type="radio" id="to_honor" name="honor_memory" value="To Honor"> To Honor<br>
+        <input type="radio" id="in_memory" name="honor_memory" value="In Memory"> In Memory<br>
+ 
+        <label for="honoree_name">Name:</label>
+        <input type="text" id="honoree_name" name="honoree_name"><br>
+ 
+        <label for="acknowledge_to">Acknowledge Donation to:</label>
+        <input type="text" id="acknowledge_to" name="acknowledge_to"><br>
+ 
+        <label for="acknowledge_address">Address:</label>
+        <input type="text" id="acknowledge_address" name="acknowledge_address"><br>
+ 
+        <label for="acknowledge_city">City:</label>
+        <input type="text" id="acknowledge_city" name="acknowledge_city"><br>
+ 
+        <label for="acknowledge_state">State:</label>
+        <select id="acknowledge_state" name="acknowledge_state">
+            <option value="Dhaka">Dhaka</option>
+            <option value="Cumilla">Cumilla</option>
+            <option value="Rangpur">Rangpur</option>
+            <option value="Chattogram">Chattogram</option>
+        </select><br>
+ 
+        <label for="acknowledge_zip">Zip:</label>
+        <input type="text" id="acknowledge_zip" name="acknowledge_zip"><br>
+ 
+        <h2>Additional Information</h2>
+        <p>Please enter your name, company or organization as you would like it to appear in our publications:</p>
+        <label for="publication_name">Name:</label>
+        <input type="text" id="publication_name" name="publication_name"><br>
+ 
+        <input type="checkbox" id="anonymous" name="anonymous"> I would like my gift to remain anonymous<br>
+        <input type="checkbox" id="matching_gift" name="matching_gift"> My employer offers a matching gift programme. I will mail the matching gift form.<br>
+        <input type="checkbox" id="no_thank_you_letter" name="no_thank_you_letter"> Please save the cost of acknowledging by not mailing a thank you letter.<br>
+ 
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="3" cols="50" placeholder="Your comments..."></textarea><br>
+ 
+        <label>How may we contact you?</label><br>
+        <input type="checkbox" id="contact_email" name="contact_method" value="Email"> E-Mail<br>
+        <input type="checkbox" id="contact_postal" name="contact_method" value="Postal"> Postal Mail<br>
+        <input type="checkbox" id="contact_phone" name="contact_method" value="Phone"> Telephone<br>
+        <input type="checkbox" id="contact_fax" name="contact_method" value="Fax"> Fax<br><br>
+ 
+        <label>I would like to receive newsletters and information about special events by:</label><br>
+        <input type="checkbox" id="newsletter_email" name="newsletter_method" value="Email"> E-Mail<br>
+        <input type="checkbox" id="newsletter_postal" name="newsletter_method" value="Postal"> Postal Mail<br>
+        <input type="checkbox" id="volunteering_info" name="volunteering_info"> I would like information about volunteering with the organization.<br><br>
+ 
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      <script>
+      const form = document.getElementById("donorForm");
+      const message = document.getElementById("message");
+ 
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        validateForm();
+      });
+ 
+      function showError(id, condition) {
+        document.getElementById(id).style.display = condition ? "inline" : "none";
+      }
+ 
+      function validateForm() {
+        // Get values
+        let isValid = true;
+        let fname = document.getElementById("fname").value.trim();
+        let lname = document.getElementById("lname").value.trim();
+        let address1 = document.getElementById("address1").value.trim();
+        let city = document.getElementById("city").value.trim();
+        let state = document.getElementById("state").value;
+        let zip = document.getElementById("zip").value.trim();
+        let country = document.getElementById("country").value;
+        let email = document.getElementById("email").value.trim();
+ 
+        // Inline validation
+        showError("fname_error", fname === "");
+        showError("lname_error", lname === "");
+        showError("address1_error", address1 === "");
+        showError("city_error", city === "");
+        showError("state_error", state === "");
+        showError("zip_error", zip === "");
+        showError("country_error", country === "");
+ 
+        let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        showError("email_error", !emailPattern.test(email));
+ 
+        // Donation amount validation
+        let donationRadios = document.getElementsByName("donation_amount");
+        let donationSelected = false;
+        for (let i = 0; i < donationRadios.length; i++) {
+          if (donationRadios[i].checked) {
+            donationSelected = true;
+            break;
+          }
+        }
+        showError("donation_error", !donationSelected);
+ 
+        // Check overall validity
+        if (
+          fname === "" || lname === "" || address1 === "" || city === "" ||
+          state === "" || zip === "" || country === "" ||
+          !emailPattern.test(email) || !donationSelected
+        ) {
+          isValid = false;
+        }
+ 
+        if (isValid) {
+          message.innerHTML = "Form submitted successfully!";
+          setTimeout(() => {
+            window.location.href = "task3.html";
+          }, 1000);
+        } else {
+          message.innerHTML = "";
+        }
+      }
+    </script>
+
+    </form>
+   
+ 
+
+</body>
+</html>
