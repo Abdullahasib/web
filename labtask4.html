@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Donor Information Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .required {
+      color: red;
+      display: none;
+    }
+
+    h1, h2 {
+      color: red;
+      text-align: center;
+    }
+
+    form {
+      background-color: #7eb3d9;
+      padding: 20px;
+      border-radius: 10px;
+      width: 700px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border: 1px solid #0abfdf;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #ab6de4;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px 5px 0 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #9a77eada;
+    }
+
+    p {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      form {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form id="donorForm">
+    <h1>Donor Information</h1>
+
+    <label for="fname">First name:<span class="required">*</span></label>
+    <input type="text" id="fname" name="fname">
+    <span id="fname_error" class="required">First name is required.</span>
+
+    <label for="lname">Last name:<span class="required">*</span></label>
+    <input type="text" id="lname" name="lname">
+    <span id="lname_error" class="required">Last name is required.</span>
+
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company">
+
+    <label for="address1">Address 1:<span class="required">*</span></label>
+    <input type="text" id="address1" name="address1">
+    <span id="address1_error" class="required">Address is required.</span>
+
+    <label for="address2">Address 2:</label>
+    <input type="text" id="address2" name="address2">
+
+    <label for="city">City:<span class="required">*</span></label>
+    <input type="text" id="city" name="city">
+    <span id="city_error" class="required">City is required.</span>
+
+    <label for="state">State:<span class="required">*</span></label>
+    <select id="state" name="state">
+      <option value="">Select a state</option>
+      <option value="Dhaka">Dhaka</option>
+      <option value="Cumilla">Cumilla</option>
+      <option value="Rangpur">Rangpur</option>
+      <option value="Chattogram">Chattogram</option>
+    </select>
+    <span id="state_error" class="required">State is required.</span>
+
+    <label for="zip">Zip Code:<span class="required">*</span></label>
+    <input type="text" id="zip" name="zip">
+    <span id="zip_error" class="required">Zip code is required.</span>
+
+    <label for="country">Country:<span class="required">*</span></label>
+    <select id="country" name="country">
+      <option value="">Select a country</option>
+      <option value="Bangladesh">Bangladesh</option>
+      <option value="India">India</option>
+      <option value="Pakistan">Pakistan</option>
+      <option value="China">China</option>
+    </select>
+    <span id="country_error" class="required">Country is required.</span>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone">
+
+    <label for="fax">Fax:</label>
+    <input type="text" id="fax" name="fax">
+
+    <label for="email">Email:<span class="required">*</span></label>
+    <input type="email" id="email" name="email">
+    <span id="email_error" class="required">Valid email is required.</span>
+
+    <label>Donation Amount:<span class="required">*</span></label><br>
+    <input type="radio" name="donation_amount" value="None"> None
+    <input type="radio" name="donation_amount" value="50"> $50
+    <input type="radio" name="donation_amount" value="75"> $75
+    <input type="radio" name="donation_amount" value="100"> $100
+    <input type="radio" name="donation_amount" value="250"> $250
+    <input type="radio" name="donation_amount" value="500"> $500
+    <input type="radio" name="donation_amount" value="Other"> Other
+    <span id="donation_error" class="required">Please select a donation amount.</span>
+
+    <label for="other_amount">Other Amount: $</label>
+    <input type="text" id="other_amount" name="other_amount">
+
+    <label>Recurring Donation:</label><br>
+    <input type="checkbox" id="recurring" name="recurring"> I am interested in giving on a regular basis
+
+    <label for="monthly_amount">Monthly Credit Card $</label>
+    <input type="number" id="monthly_amount" name="monthly_amount">
+    <label for="duration_months"> For </label>
+    <input type="number" id="duration_months" name="duration_months">
+    <label> Months </label>
+
+    <h2>Honorarium and Memorial Donation Information</h2>
+
+    <label>I would like to make this donation:</label><br>
+    <input type="radio" name="honor_memory" value="To Honor"> To Honor
+    <input type="radio" name="honor_memory" value="In Memory"> In Memory
+
+    <label for="honoree_name">Name:</label>
+    <input type="text" id="honoree_name" name="honoree_name">
+
+    <label for="acknowledge_to">Acknowledge Donation to:</label>
+    <input type="text" id="acknowledge_to" name="acknowledge_to">
+
+    <label for="acknowledge_address">Address:</label>
+    <input type="text" id="acknowledge_address" name="acknowledge_address">
+
+    <label for="acknowledge_city">City:</label>
+    <input type="text" id="acknowledge_city" name="acknowledge_city">
+
+    <label for="acknowledge_state">State:</label>
+    <select id="acknowledge_state" name="acknowledge_state">
+      <option value="Dhaka">Dhaka</option>
+      <option value="Cumilla">Cumilla</option>
+      <option value="Rangpur">Rangpur</option>
+      <option value="Chattogram">Chattogram</option>
+    </select>
+
+    <label for="acknowledge_zip">Zip:</label>
+    <input type="text" id="acknowledge_zip" name="acknowledge_zip">
+
+    <h2>Additional Information</h2>
+
+    <p>Please enter your name, company or organization as you would like it to appear in our publications:</p>
+
+    <label for="publication_name">Name:</label>
+    <input type="text" id="publication_name" name="publication_name">
+
+    <input type="checkbox" id="anonymous" name="anonymous"> I would like my gift to remain anonymous<br>
+    <input type="checkbox" id="matching_gift" name="matching_gift"> My employer offers a matching gift programme.<br>
+    <input type="checkbox" id="no_thank_you_letter" name="no_thank_you_letter"> Please do not mail a thank you letter.<br>
+
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="3" cols="50" placeholder="Your comments..."></textarea>
+
+    <label>How may we contact you?</label><br>
+    <input type="checkbox" name="contact_method" value="Email"> Email
+    <input type="checkbox" name="contact_method" value="Phone"> Phone
+    <input type="checkbox" name="contact_method" value="Postal"> Postal Mail
+    <input type="checkbox" name="contact_method" value="Fax"> Fax
+
+    <label>I would like to receive newsletters and information by:</label><br>
+    <input type="checkbox" name="newsletter_method" value="Email"> Email
+    <input type="checkbox" name="newsletter_method" value="Postal"> Postal Mail
+    <input type="checkbox" id="volunteering_info" name="volunteering_info"> I want volunteering information.
+
+    <p id="message"></p>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("donorForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      validateForm();
+    });
+
+    function showError(id, condition) {
+      const errorElement = document.getElementById(id);
+      if (errorElement) {
+        errorElement.style.display = condition ? "inline" : "none";
+      }
+    }
+
+    function validateForm() {
+      let isValid = true;
+      const fname = document.getElementById("fname").value.trim();
+      const lname = document.getElementById("lname").value.trim();
+      const address1 = document.getElementById("address1").value.trim();
+      const city = document.getElementById("city").value.trim();
+      const state = document.getElementById("state").value.trim();
+      const zip = document.getElementById("zip").value.trim();
+      const country = document.getElementById("country").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      showError("fname_error", fname === "");
+      showError("lname_error", lname === "");
+      showError("address1_error", address1 === "");
+      showError("city_error", city === "");
+      showError("state_error", state === "");
+      showError("zip_error", zip === "");
+      showError("country_error", country === "");
+      showError("email_error", !emailPattern.test(email));
+
+      if (
+        fname === "" || lname === "" || address1 === "" || city === "" ||
+        state === "" || zip === "" || country === "" || !emailPattern.test(email)
+      ) {
+        isValid = false;
+      }
+
+      let donationSelected = false;
+      const donationRadios = document.getElementsByName("donation_amount");
+      for (let radio of donationRadios) {
+        if (radio.checked) {
+          donationSelected = true;
+          break;
+        }
+      }
+      showError("donation_error", !donationSelected);
+      if (!donationSelected) isValid = false;
+
+      if (isValid) {
+        message.style.color = "green";
+        message.textContent = "Form submitted successfully!";
+        setTimeout(() => {
+          window.location.href = "task3.html";
+        }, 1000);
+      } else {
+        message.style.color = "red";
+        message.textContent = "Please fix the errors before submitting.";
+      }
+    }
+  </script>
+</body>
+</html>
